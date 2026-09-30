@@ -15,12 +15,11 @@ main_menu_kb = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text="🛡️ Меры поддержки СВО", callback_data="support_menu")],
     [InlineKeyboardButton(text="🏋️ Про ФОК", callback_data="about_fok")],
     [InlineKeyboardButton(text="📞 Справочная информация", callback_data="contacts")],
-    [InlineKeyboardButton(text="✉️ Обращение гражданина", url=FORM_URL)],
 ])
 
 # --- МЕНЮ МЕР ПОДДЕРЖКИ ---
 support_menu_kb = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="🏐 Волейбол (сидя)", callback_data="support_volleyball")],
+    [InlineKeyboardButton(text="🏐 Волейбол сидя", callback_data="support_volleyball")],
     [InlineKeyboardButton(text="🎲 Нарды без границ", callback_data="support_backgammon")],
     [InlineKeyboardButton(text="🧘 Мягкий фитнес", callback_data="support_fitness")],
     [InlineKeyboardButton(text="🏓 Настольный теннис", callback_data="support_table_tennis")],
