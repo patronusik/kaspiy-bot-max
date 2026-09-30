@@ -5,6 +5,7 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 # --- ССЫЛКИ ---
 CHANNEL_URL = "https://max.ru/id3025006144_gos"
 SITE_URL = "https://kaspiy-ast.ru/"  # замени на реальный сайт
+FORM_URL = "https://каспий-центр.рф/обращение"
 
 # --- ТЕКСТЫ ---
 TEXT_SUBSCRIBE = (
