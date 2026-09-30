@@ -2,7 +2,6 @@ import os
 import asyncio
 from maxbot.bot import Bot
 from maxbot.dispatcher import Dispatcher
-from dotenv import load_dotenv
 
 from handlers import start, menu, support
 
