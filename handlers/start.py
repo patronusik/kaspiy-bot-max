@@ -1,4 +1,3 @@
-python
 from maxbot.types import Message
 from config import TEXT_SUBSCRIBE, TEXT_WELCOME
 from keyboards import subscribe_kb, main_menu_kb
