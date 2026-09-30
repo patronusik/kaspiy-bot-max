@@ -1,4 +1,3 @@
-python
 from maxbot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import CHANNEL_URL, SITE_URL, FORM_URL
 
