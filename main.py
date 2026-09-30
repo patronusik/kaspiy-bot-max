@@ -5,7 +5,6 @@ from maxbot.dispatcher import Dispatcher
 
 from handlers import start, menu, support
 
-load_dotenv()
 BOT_TOKEN = os.getenv("MAX_BOT_TOKEN") or os.getenv("MAX_TOKEN") or os.getenv("BOT_TOKEN")
 
 print(f"TOKEN: {BOT_TOKEN[:10] if BOT_TOKEN else 'НЕ НАЙДЕН'}...")
