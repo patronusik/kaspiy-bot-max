@@ -2,7 +2,7 @@ from config import (
     TEXT_WELCOME, TEXT_ABOUT, TEXT_ADDRESSES, TEXT_PAID_SERVICES,
     TEXT_ABOUT_FOK, TEXT_CONTACTS, SITE_URL
 )
-from keyboards import main_menu_kb, back_to_menu_kb, check_sub_kb
+from keyboards import main_menu_kb, back_to_menu_kb, subscribe_kb
 from maxbot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from handlers.start import is_user_subscribed  # ← импорт функции проверки
 
