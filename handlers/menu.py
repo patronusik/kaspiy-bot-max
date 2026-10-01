@@ -23,7 +23,7 @@ def register(dp, bot):
         payload = cb.payload
 
         if payload == "check_sub":
-            await bot.send_message(user_id=user_id, text=TEXT_WELCOME, reply_markup=main_menu_kb)
+            await bot.send_message(user_id=user_id, text=TEXT_WELCOME, reply_markup=main_menu_kb, format="markdown")
 
         elif payload == "about":
             kb = InlineKeyboardMarkup(inline_keyboard=[
