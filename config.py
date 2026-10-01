@@ -1,6 +1,7 @@
 import os
 
 CHANNEL_ID = -69190446336694
+MAX_BOT_TOKEN = os.getenv("MAX_BOT_TOKEN") or os.getenv("MAX_TOKEN") or os.getenv("BOT_TOKEN")
 BOT_TOKEN = os.getenv("MAX_BOT_TOKEN") or os.getenv("MAX_TOKEN") or os.getenv("BOT_TOKEN")
 
 # --- ССЫЛКИ ---
