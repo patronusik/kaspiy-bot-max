@@ -23,5 +23,6 @@ def register(dp, bot):
         await bot.send_message(
             user_id=message.sender.id,
             text=TEXT_SUBSCRIBE,
-            reply_markup=subscribe_kb
+            reply_markup=subscribe_kb,
+            format="markdown"
         )
