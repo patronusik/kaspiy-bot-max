@@ -46,23 +46,23 @@ def register(dp, bot):
                 [InlineKeyboardButton(text="🌐 Перейти на сайт", url=SITE_URL)],
                 [InlineKeyboardButton(text="🏠 На главную", callback_data="back_to_menu")],
             ])
-            await bot.send_message(user_id=user_id, text=TEXT_ABOUT, reply_markup=kb)
+            await bot.send_message(user_id=user_id, text=TEXT_ABOUT, reply_markup=kb, format="markdown")
 
         elif payload == "addresses":
-            await bot.send_message(user_id=user_id, text=TEXT_ADDRESSES, reply_markup=back_to_menu_kb)
+            await bot.send_message(user_id=user_id, text=TEXT_ADDRESSES, reply_markup=back_to_menu_kb, format="markdown")
 
         elif payload == "paid_services":
             kb = InlineKeyboardMarkup(inline_keyboard=[
                 [InlineKeyboardButton(text="🌐 Перейти на сайт", url=SITE_URL)],
                 [InlineKeyboardButton(text="🏠 На главную", callback_data="back_to_menu")],
             ])
-            await bot.send_message(user_id=user_id, text=TEXT_PAID_SERVICES, reply_markup=kb)
+            await bot.send_message(user_id=user_id, text=TEXT_PAID_SERVICES, reply_markup=kb, format="markdown")
 
         elif payload == "about_fok":
-            await bot.send_message(user_id=user_id, text=TEXT_ABOUT_FOK, reply_markup=back_to_menu_kb)
+            await bot.send_message(user_id=user_id, text=TEXT_ABOUT_FOK, reply_markup=back_to_menu_kb, format="markdown")
 
         elif payload == "contacts":
-            await bot.send_message(user_id=user_id, text=TEXT_CONTACTS, reply_markup=back_to_menu_kb)
+            await bot.send_message(user_id=user_id, text=TEXT_CONTACTS, reply_markup=back_to_menu_kb, format="markdown")
 
         elif payload == "back_to_menu":
-            await bot.send_message(user_id=user_id, text=TEXT_WELCOME, reply_markup=main_menu_kb)
+            await bot.send_message(user_id=user_id, text=TEXT_WELCOME, reply_markup=main_menu_kb, format="markdown")
