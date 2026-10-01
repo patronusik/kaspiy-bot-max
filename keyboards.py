@@ -2,9 +2,9 @@ from maxbot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import CHANNEL_URL, SITE_URL, FORM_URL
 
 # --- ПРОВЕРКА ПОДПИСКИ ---
-check_sub_kb = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="📢 Подписаться на канал", url=CHANNEL_URL)],
-    [InlineKeyboardButton(text="✅ Я подписался", callback_data="check_sub")]
+subscribe_kb = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="📢 Открыть канал", url=CHANNEL_URL)],
+    [InlineKeyboardButton(text="✅ Я подписан", callback_data="check_sub")]
 ])
 
 # --- ГЛАВНОЕ МЕНЮ ---
