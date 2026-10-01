@@ -19,4 +19,4 @@ def register(dp, bot):
         elif payload.startswith("support_"):
             key = payload[8:]
             text = SUPPORT_DATA.get(key, "Информация скоро появится.")
-            await bot.send_message(user_id=user_id, text=text, reply_markup=back_to_support_kb)
+            await bot.send_message(user_id=user_id, text=text, reply_markup=back_to_support_kb, format="markdown")
