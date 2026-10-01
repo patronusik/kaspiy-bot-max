@@ -1,5 +1,6 @@
 import os
 import asyncio
+import certifi
 from maxbot.bot import Bot
 from maxbot.dispatcher import Dispatcher
 
