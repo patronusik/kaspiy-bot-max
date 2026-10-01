@@ -19,7 +19,7 @@ async def is_user_subscribed(user_id: int) -> bool:
 
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.get(url, headers=headers, params=params) as resp:
+            async with session.get(url, headers=headers, params=params, ssl=False) as resp:
                 if resp.status != 200:
                     print(f"Ошибка API проверки подписки: {resp.status}, {await resp.text()}")
                     return False
