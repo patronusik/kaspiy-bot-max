@@ -2,8 +2,9 @@ from config import (
     TEXT_WELCOME, TEXT_ABOUT, TEXT_ADDRESSES, TEXT_PAID_SERVICES,
     TEXT_ABOUT_FOK, TEXT_CONTACTS, SITE_URL
 )
-from keyboards import main_menu_kb, back_to_menu_kb
+from keyboards import main_menu_kb, back_to_menu_kb, check_sub_kb
 from maxbot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from handlers.start import is_user_subscribed  # ← импорт функции проверки
 
 def register(dp, bot):
 
@@ -23,7 +24,22 @@ def register(dp, bot):
         payload = cb.payload
 
         if payload == "check_sub":
-            await bot.send_message(user_id=user_id, text=TEXT_WELCOME, reply_markup=main_menu_kb, format="markdown")
+            # Делаем реальную проверку подписки
+            subscribed = await is_user_subscribed(user_id)
+            
+            if subscribed:
+                await bot.send_message(
+                    user_id=user_id,
+                    text=TEXT_WELCOME,
+                    reply_markup=main_menu_kb,
+                    format="markdown"
+                )
+            else:
+                await bot.send_message(
+                    user_id=user_id,
+                    text="❌ Ты ещё не подписался на канал. Подпишись и нажми кнопку «Я подписался» ещё раз.",
+                    reply_markup=check_sub_kb
+                )
 
         elif payload == "about":
             kb = InlineKeyboardMarkup(inline_keyboard=[
