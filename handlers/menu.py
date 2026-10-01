@@ -38,7 +38,7 @@ def register(dp, bot):
                 await bot.send_message(
                     user_id=user_id,
                     text="❌ Ты ещё не подписался на канал. Подпишись и нажми кнопку «Я подписался» ещё раз.",
-                    reply_markup=check_sub_kb
+                    reply_markup=subscribe_kb
                 )
 
         elif payload == "about":
