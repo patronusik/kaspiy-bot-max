@@ -14,7 +14,7 @@ def register(dp, bot):
             user_id = getattr(cb, "user_id", None)
 
         if payload == "support_menu":
-            await bot.send_message(user_id=user_id, text=TEXT_SUPPORT_MENU, reply_markup=support_menu_kb)
+            await bot.send_message(user_id=user_id, text=TEXT_SUPPORT_MENU, reply_markup=support_menu_kb, format="markdown")
 
         elif payload.startswith("support_"):
             key = payload[8:]
