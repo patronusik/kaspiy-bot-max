@@ -9,7 +9,7 @@ subscribe_kb = InlineKeyboardMarkup(inline_keyboard=[
 
 # --- ГЛАВНОЕ МЕНЮ ---
 main_menu_kb = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="🏛️ Об учреждении", callback_data="about")],
+    [InlineKeyboardButton(text="🛶 Об учреждении", callback_data="about")],
     [InlineKeyboardButton(text="📍 Адреса учреждения", callback_data="addresses")],
     [InlineKeyboardButton(text="💳 Платные услуги", url="https://kaspiy-ast.ru/roditelyam/")],
     [InlineKeyboardButton(text="🎖️ Меры поддержки СВО", callback_data="support_menu")],
