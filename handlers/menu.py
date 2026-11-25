@@ -1,8 +1,8 @@
 from config import (
     TEXT_WELCOME, TEXT_ABOUT, TEXT_ADDRESSES, TEXT_PAID_SERVICES,
-    TEXT_ABOUT_FOK, TEXT_CONTACTS, SITE_URL
+    TEXT_ABOUT_FOK, TEXT_CONTACTS, SITE_URL, TEXT_AVANGARD_MENU, TEXT_AVANGARD_ABOUT, TEXT_AVANGARD_CONTACTS
 )
-from keyboards import main_menu_kb, back_to_menu_kb, subscribe_kb
+from keyboards import main_menu_kb, back_to_menu_kb, subscribe_kb, avangard_menu_kb, back_to_avangard_kb
 from maxbot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from handlers.start import is_user_subscribed  # ← импорт функции проверки
 
@@ -64,5 +64,30 @@ def register(dp, bot):
         elif payload == "contacts":
             await bot.send_message(user_id=user_id, text=TEXT_CONTACTS, reply_markup=back_to_menu_kb, format="markdown")
 
+        # --- АВАНГАРД ---
+        elif payload == "avangard_menu":
+            await bot.send_message(
+                user_id=user_id,
+                text=TEXT_AVANGARD_MENU,
+                reply_markup=avangard_menu_kb,
+                format="markdown"
+            )
+
+        elif payload == "avangard_about":
+            await bot.send_message(
+                user_id=user_id,
+                text=TEXT_AVANGARD_ABOUT,
+                reply_markup=back_to_avangard_kb,
+                format="markdown"
+            )
+
+        elif payload == "avangard_contacts":
+            await bot.send_message(
+                user_id=user_id,
+                text=TEXT_AVANGARD_CONTACTS,
+                reply_markup=back_to_avangard_kb,
+                format="markdown"
+            )
+        
         elif payload == "back_to_menu":
             await bot.send_message(user_id=user_id, text=TEXT_WELCOME, reply_markup=main_menu_kb, format="markdown")
