@@ -13,6 +13,7 @@ main_menu_kb = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text="📍 Адреса учреждения", callback_data="addresses")],
     [InlineKeyboardButton(text="💳 Платные услуги", url="https://kaspiy-ast.ru/roditelyam/")],
     [InlineKeyboardButton(text="🎖️ Спорт для СВО", callback_data="support_menu")],
+    [InlineKeyboardButton(text="⭐ Авангард", callback_data="avangard_menu")],
     [InlineKeyboardButton(text="🏋️ Про ФОК", callback_data="about_fok")],
     [InlineKeyboardButton(text="📞 Контактная информация", callback_data="contacts")],
     [InlineKeyboardButton(text="💬 Остались вопросы? Напишите нам", url="https://pos.gosuslugi.ru/landing/")],
