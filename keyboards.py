@@ -37,3 +37,17 @@ back_to_support_kb = InlineKeyboardMarkup(inline_keyboard=[
 back_to_menu_kb = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text="🏠 На главную", callback_data="back_to_menu")],
 ])
+
+# --- АВАНГАРД ---
+avangard_menu_kb = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="⭐ О центре", callback_data="avangard_about")],
+    [InlineKeyboardButton(text="📄 Документы", url="https://kaspiy-ast.ru/dokumenty/")],
+    [InlineKeyboardButton(text="👥 Команда специалистов", url="https://kaspiy-ast.ru/komanda/")],
+    [InlineKeyboardButton(text="📞 Контактная информация", callback_data="avangard_contacts")],
+    [InlineKeyboardButton(text="⬅️ Назад в меню", callback_data="back_to_menu")],
+])
+
+back_to_avangard_kb = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="⬅️ Назад к «Авангарду»", callback_data="avangard_menu")],
+    [InlineKeyboardButton(text="🏠 На главную", callback_data="back_to_menu")],
+])
